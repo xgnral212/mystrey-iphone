@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاكي الآيفون المتكامل</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="iphone-frame">
+        <div class="notch"></div>
+        <div class="status-bar" id="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <img src="https://img.icons8.com/ios-filled/15/ffffff/wifi--v1.png" alt="Wi-Fi">
+                <img src="https://img.icons8.com/ios-filled/15/ffffff/full-battery.png" alt="Battery">
+            </div>
+        </div>
+
+        <div class="screen" id="iphone-screen">
+            <div class="lock-screen" id="lock-screen">
+                <div class="lock-time" id="lock-time">9:41</div>
+                <div class="lock-date" id="lock-date">الثلاثاء 24 يونيو</div>
+                <div class="notification-area" id="notification-area">
+                    <div class="notification">
+                        <img src="https://img.icons8.com/fluent/30/000000/twitter.png" alt="Tweta Icon">
+                        <div class="notification-content">
+                            <strong>Tweta</strong>
+                            <p>لديك تغريدة جديدة من @صديق_الافتراضي</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swipe-indicator"></div>
+                <div class="lock-actions">
+                    <button class="action-btn camera-btn"><img src="https://img.icons8.com/sf-regular/20/ffffff/camera.png" alt="Camera"></button>
+                    <button class="action-btn flashlight-btn"><img src="https://img.icons8.com/sf-regular/20/ffffff/flashlight.png" alt="Flashlight"></button>
+                </div>
+            </div>
+
+            <div class="auth-screen hidden" id="auth-screen">
+                <div class="auth-container">
+                    <img src="https://img.icons8.com/ios-filled/60/007AFF/mac-os--v1.png" alt="App Logo" class="auth-logo">
+                    <h2>تسجيل الدخول أو إنشاء حساب</h2>
+                    <input type="text" id="auth-username" placeholder="اسم المستخدم">
+                    <input type="password" id="auth-password" placeholder="كلمة المرور">
+                    <button id="auth-login-btn">تسجيل الدخول</button>
+                    <button id="auth-register-btn" class="secondary-btn">إنشاء حساب جديد</button>
+                    <p id="auth-message" class="message"></p>
+                </div>
+            </div>
+
+            <div class="home-screen hidden" id="home-screen">
+                <div class="app-row">
+                    <div class="app-icon" id="tweta-icon">
+                        <img src="https://img.icons8.com/color/60/twitterx.png" alt="Tweta">
+                        <span>Tweta</span>
+                    </div>
+                    <div class="app-icon" id="clubchat-icon">
+                        <img src="https://img.icons8.com/color/60/snapchat.png" alt="ClubChat">
+                        <span>ClubChat</span>
+                    </div>
+                    <div class="app-icon">
+                        <img src="https://img.icons8.com/ios-filled/60/ffffff/phone.png" alt="Phone">
+                        <span>Phone</span>
+                    </div>
+                    <div class="app-icon">
+                        <img src="https://img.icons8.com/ios-filled/60/ffffff/messages-fill.png" alt="Messages">
+                        <span>Messages</span>
+                    </div>
+                </div>
+                <div class="dock">
+                    <div class="dock-item">
+                        <img src="https://img.icons8.com/ios-filled/40/ffffff/safari.png" alt="Safari">
+                    </div>
+                    <div class="dock-item">
+                        <img src="https://img.icons8.com/ios-filled/40/ffffff/app-store.png" alt="App Store">
+                    </div>
+                    <div class="dock-item">
+                        <img src="https://img.icons8.com/ios-filled/40/ffffff/settings.png" alt="Settings">
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-interface hidden" id="tweta-app">
+                <header class="app-header tweta-header">
+                    <button class="back-to-home"><img src="https://img.icons8.com/ios-filled/24/ffffff/home.png" alt="Home"></button>
+                    <h2 id="tweta-header-title">الرئيسية</h2>
+                    <button class="profile-btn"><img src="https://img.icons8.com/ios-filled/24/ffffff/user.png" alt="Profile"></button>
+                </header>
+                <div class="app-content" id="tweta-content-home">
+                    <div class="new-post-area">
+                        <textarea id="tweta-post-input" placeholder="ماذا يدور في ذهنك؟"></textarea>
+                        <button id="post-tweta-btn">نشر</button>
+                    </div>
+                    <div id="tweta-feed" class="feed-container">
+                        <div class="tweta-post">
+                            <img src="https://source.unsplash.com/random/40x40/?portrait&1" alt="User Avatar" class="user-avatar">
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <strong>مستخدم افتراضي1</strong> <span class="username">@default_user1</span> <span class="time-ago">· 5د</span>
+                                </div>
+                                <p>هذا تحديث جديد لتصميم محاكي الآيفون! نأمل أن يعجبكم الشكل والميزات الجديدة.</p>
+                                <div class="post-actions">
+                                    <span><img src="https://img.icons8.com/sf-regular/18/66757f/speech-bubble.png" alt="Reply"> 3</span>
+                                    <span><img src="https://img.icons8.com/sf-regular/18/66757f/retweet.png" alt="Retweet"> 1</span>
+                                    <span><img src="https://img.icons8.com/sf-regular/18/66757f/heart.png" alt="Like"> 12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-content hidden" id="tweta-content-search">
+                    <div class="search-bar">
+                        <input type="text" id="tweta-search-input" placeholder="ابحث عن أصدقاء...">
+                        <button id="tweta-search-btn">بحث</button>
+                    </div>
+                    <div id="tweta-search-results" class="user-list">
+                        </div>
+                </div>
+
+                <div class="app-navbar">
+                    <button class="nav-item active" data-nav-target="tweta-content-home">
+                        <img src="https://img.icons8.com/sf-regular/24/1DA1F2/home-page.png" alt="Home">
+                        <span>الرئيسية</span>
+                    </button>
+                    <button class="nav-item" data-nav-target="tweta-content-search">
+                        <img src="https://img.icons8.com/sf-regular/24/66757f/search.png" alt="Search">
+                        <span>بحث</span>
+                    </button>
+                    <button class="nav-item">
+                        <img src="https://img.icons8.com/sf-regular/24/66757f/bell.png" alt="Notifications">
+                        <span>إشعارات</span>
+                    </button>
+                    <button class="nav-item">
+                        <img src="https://img.icons8.com/sf-regular/24/66757f/email.png" alt="Messages">
+                        <span>رسائل</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="app-interface hidden" id="clubchat-app">
+                <header class="app-header clubchat-header">
+                    <button class="back-to-home"><img src="https://img.icons8.com/ios-filled/24/ffffff/home.png" alt="Home"></button>
+                    <h2 id="clubchat-header-title">الدردشات</h2>
+                    <button class="camera-snap-btn"><img src="https://img.icons8.com/sf-regular/24/ffffff/camera.png" alt="Snap"></button>
+                </header>
+                <div class="app-content" id="clubchat-content-home">
+                    <div class="stories-section">
+                        <h3>الستوريز</h3>
+                        <div id="clubchat-stories" class="stories-container">
+                            <div class="story-item">
+                                <img src="https://source.unsplash.com/random/60x60/?face,portrait&3" alt="Story 1">
+                                <span>صديق1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chats-section">
+                        <h3>الدردشات</h3>
+                        <div id="clubchat-chats-list" class="chats-container">
+                            <div class="chat-item" data-chat-id="user1">
+                                <img src="https://source.unsplash.com/random/40x40/?face,portrait&6" alt="Chat User" class="user-avatar">
+                                <div class="chat-info">
+                                    <span class="chat-name">صديق3</span>
+                                    <p class="last-message">مرحباً! كيف حالك؟ <span class="message-time">10:30 ص</span></p>
+                                </div>
+                                <span class="new-snap-indicator hidden"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-content hidden" id="clubchat-content-friends">
+                    <div class="search-bar">
+                        <input type="text" id="clubchat-search-input" placeholder="ابحث عن مستخدمين...">
+                        <button id="clubchat-search-btn">بحث</button>
+                    </div>
+                    <div id="clubchat-search-results" class="user-list">
+                        </div>
+                </div>
+
+                <div class="app-navbar">
+                    <button class="nav-item active" data-nav-target="clubchat-content-home">
+                        <img src="https://img.icons8.com/ios-filled/24/FFFC00/chat.png" alt="Chat">
+                        <span>الدردشات</span>
+                    </button>
+                    <button class="nav-item" data-nav-target="clubchat-content-friends">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/contact-card.png" alt="Friends">
+                        <span>الأصدقاء</span>
+                    </button>
+                    <button class="nav-item">
+                        <img src="https://img.icons8.com/ios-filled/24/ffffff/map.png" alt="Map">
+                        <span>الخريطة</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="app-interface hidden" id="private-chat-app">
+                <header class="app-header clubchat-header">
+                    <button class="back-to-clubchat-list"><img src="https://img.icons8.com/ios-filled/24/ffffff/back.png" alt="Back"></button>
+                    <h2 id="private-chat-header-name">اسم الصديق</h2>
+                    <button class="profile-btn"><img src="https://img.icons8.com/ios-filled/24/ffffff/user.png" alt="Profile"></button>
+                </header>
+                <div class="app-content chat-messages-view" id="private-chat-messages">
+                    <div class="chat-bubble received">
+                        مرحباً بك! كيف الأمور؟
+                    </div>
+                    <div class="chat-bubble sent">
+                        أهلاً! بخير والحمد لله، ماذا عنك؟
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="private-chat-message-input" placeholder="اكتب رسالة...">
+                    <button id="send-private-chat-message-btn"><img src="https://img.icons8.com/sf-regular/24/ffffff/paper-plane.png" alt="Send"></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
